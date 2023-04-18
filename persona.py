@@ -1,5 +1,5 @@
 import datetime
-
+import time
 from cuenta import Cuenta
 
 def convertir_fecha(string_fecha):
@@ -33,4 +33,6 @@ class Persona(object):
 
     def saludo(self):
         #  Saludo que indique hora fecha y clima
-        return f"Hola {self.nombre}"
+        return f"Bienvenida {self.nombre}"
+        print(datetime.date())
+        time.strftime("%H:%M:%S")
