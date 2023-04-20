@@ -16,9 +16,9 @@
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
           background: #beebcf;
         }
-        /* footer {
+        footer {
           background-color: #F2F6FA !important;
-        } */
+        } 
         .topNav {
           border-top: 2px solid #3498DB;
         }
@@ -83,11 +83,11 @@
 						<img src="https://1ra-intro-python.adaitw.org/img/iso_blanco.svg" width="112" height="328">
             
 					</a>
-					<!-- <div class="navbar-burger burger" data-target="topNav">
+				 <div class="navbar-burger burger" data-target="topNav">
 						<span></span>
 						<span></span>
 						<span></span>
-					</div> -->
+					</div> 
 				</div>
 
 				<div id="topNav" class="navbar-menu">
@@ -116,7 +116,7 @@
 			<div class="container">
 				<div class="navbar-menu">
 					<div class="navbar-start">
-            <a class="navbar-item is-active" href="#">Inicio</a>
+            <a class="navbar-item" href="/">Inicio</a>
 						<a class="navbar-item is-active" href="cuentas">Movimientos</a>
            	<a class="navbar-item" href="proceso">Proceso de Archivos</a>
             <a class="navbar-item" href="nuevo">Nuevo cliente</a>
@@ -153,7 +153,7 @@
     <section class="container">
       <article class="post">
         <h4>
-          Procesos
+          Año anterior
         </h4>
       </article>
 			<div class="columns">
@@ -161,7 +161,7 @@
 					<div class="box content">
 						{% for movement in movements %}
 						<article class="post">
-							
+							{{movement}}
               {{obtener_todos_los_movimientos}}
 						</article>
 						{% endfor %}

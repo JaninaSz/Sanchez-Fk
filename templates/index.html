@@ -26,7 +26,7 @@
           border-bottom: 1px solid #E6EAEE;
         }
         .container .columns {
-          margin: 3rem 0;
+          margin: 5rem 0;
         }
         .navbar-menu .navbar-item {
           padding: 0 2rem;
@@ -76,7 +76,47 @@
     </head>
 
     <body>
-		<nav class="navbar topNav">
+        <!--Encabezado con usuario-->
+        <nav class="navbar is-white topNav">
+			<div class="container">
+				<div class="navbar-brand">
+					<a class="navbar-item" href="../">
+						<img src="https://1ra-intro-python.adaitw.org/img/iso_blanco.svg" width="112" height="28">
+					<!--C:\Curso\Python\Flask\templates\nuevo.png-->
+                    </a>
+					<div class="navbar-burger burger" data-target="topNav">
+						<span> </span>
+						<span> t</span>
+						<span></span>
+					</div>
+				</div>
+				<div id="topNav" class="navbar-menu">
+					<div class="navbar-end">
+						<div class="navbar-item">
+							<div class="field is-grouped">
+								<p class="control">
+									<a class="button is-small">
+										<span class="icon">
+											<i class="fa fa-user-plus"></i>
+										</span>
+									</a>
+								</p>
+								<p class="control">
+									<a class="button is-small is-info is-outlined">
+										<span class="icon">
+											<i class="fa fa-user"></i>
+										</span>
+										<span>Ingresar</span>
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+        <!--Encabezado con icono-->
+		<!--  <nav class="navbar topNav">
 			<div class="container">
 
 				<div class="navbar-brand">
@@ -86,47 +126,324 @@
 					</a>
                 </div>
             </div>
-        </nav>
+        </nav> -->
   
+<!--Encabezado de menu-->
+<nav class="navbar is-white">
+    <div class="container">
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item is-active" href="/">Inicio</a>
+                <a class="navbar-item" href="cuentas">Movimientos</a>
+                <a class="navbar-item" href="proceso">Proceso de Archivos</a>
+                <a class="navbar-item" href="nuevo">Nuevo cliente</a>
+            </div>
+        <div class="column is-7">     
+        <div class="navbar-end">
+                <article class="post">
+                  <h2>
+                  Bienvenida
+                 </h2>
+                 </article> 
+            <!--Clima pequeño-->    
+            <!-- weather widget start --><div id="m-booked-small-t1-97535"> 
+                <div class="booked-weather-120x100 w100-bg" style="background-color:#FFFFFF; color:#333333; border-radius:4px; -moz-border-radius:4px; width:118px !important;"> <div style="background-color:#2373CA; color:#FFFFFF;" class="booked-bl-simple-city smolest">Curuzu Cuatia</div> <div class="booked-weather-120x100-degree w01"><span class="plus">+</span>21&deg;<sub class="booked-weather-120x100-type">C</sub>
+                </div> 
+                <div class="booked-weather-120x100-high-low"> <p>Alta: <span class="plus">+</span>22&deg;</p> <p>Baja: <span class="plus">+</span>11&deg;</p> 
+                </div> 
+                <div style="background-color:#FFFFFF; color:#333333;" class="booked-weather-120x100-date">Mar, 18.04.2023</div> </div> </div>
+                <script type="text/javascript"> var css_file=document.createElement("link"); var widgetUrl = location.href; css_file.setAttribute("rel","stylesheet"); css_file.setAttribute("type","text/css"); css_file.setAttribute("href",'https://s.bookcdn.com/css/w/bw-120-100.css?v=0.0.1'); document.getElementsByTagName("head")[0].appendChild(css_file); function setWidgetData_97535(data) { if(typeof(data) != 'undefined' && data.results.length > 0) { for(var i = 0; i < data.results.length; ++i) { var objMainBlock = document.getElementById('m-booked-small-t1-97535'); if(objMainBlock !== null) { var copyBlock = document.getElementById('m-bookew-weather-copy-'+data.results[i].widget_type); objMainBlock.innerHTML = data.results[i].html_code; if(copyBlock !== null) objMainBlock.appendChild(copyBlock); } } } else { alert('data=undefined||data.results is empty'); } } var widgetSrc = "https://widgets.booked.net/weather/info?action=get_weather_info;ver=6;cityID=55938;type=11;scode=43311;domid=582;anc_id=28710;cmetric=1;wlangID=4;color=ffffff;wwidth=118;header_color=2373ca;text_color=333333;link_color=ffffff;border_form=0;footer_color=ffffff;footer_text_color=333333;transparent=0";widgetSrc += ';ref=' + widgetUrl;widgetSrc += ';rand_id=97535';var weatherBookedScript = document.createElement("script"); weatherBookedScript.setAttribute("type", "text/javascript"); weatherBookedScript.src = widgetSrc; document.body.appendChild(weatherBookedScript) 
+                   </script>
+          <!-- weather widget end -->  
+          
+  
+        </div>
+        </div> <!--Cierra encabezado final-->
+    </div><!--Cierra menu-->
+</div><!--Cierra contenedor-->
+</nav>
 
-		<nav class="navbar">
-			<div class="container">
-				<div class="navbar-menu">
-					<div class="navbar-start">
-						<a class="navbar-item is-active" href="#">Inicio</a>
-                        <a class="navbar-item is-active" href="cuentas">Movimientos</a>
-           	<a class="navbar-item" href="proceso">Proceso de Archivos</a>
-            <a class="navbar-item" href="nuevo">Nuevo cliente</a>
-					</div>
-          <div class="navbar-end">
-						<article class="post">
-              <h2>
-                {{saludo}}
-              </h2>
-            </article>
-					</div>
-				</div>
-			</div>
-		</nav>
 		
         
     <!--<div class="container d-flex h-75">-->
-        <div class="container">
-	    <div class="bienvenida">
-	    	<h3>BIENVENIDAS</h3>
-			<div style="width:100%">
-			<form action="/persona/buscar" method="GET">
-			  <div class="form-group">
-			    <label for="exampleInputEmail1">Buscar clientes: </label>
-			    <input type="buscar" autocomplete="false" name="keyword" autofocus class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=" por DNI...">
-			    <br>
-                <small id="emailHelp" class="form-text text-muted">Solo se muestran datos generales.</small>
-			  </div>
-			  <button type="submit" class="btn btn-primary">Buscar</button>
-			</form>
-			</div>
-	    </div>
-	</div>
+    <div class="container center-h center-v">
+	    <!--Clima grande--> 
+        <!--<div class="navbar-end">
+            <article class="post">
+                <div id="ww_0df831980eed7" v='1.3' loc='auto' a='{"t":"horizontal","lang":"es","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'><a href="https://weatherwidget.org/es/android-app/" id="ww_0df831980eed7_u" target="_blank">App del clima para Android</a></div><script async src="https://app1.weatherwidget.org/js/?id=ww_0df831980eed7"></script>
+            </div></div></div></div> <div class="dng-column col-sm-12 col-lg-6 order-lg-2 order-3"><div class="dng-column-inner " id="column-855140" > <div id="dnn_Mapa1" class="panebox Mapa1"><div class="DnnModule DnnModule-DNN_HTML DnnModule-765"><a name="765"></a>
+            </article>
+        </div> -->
+        <style>
+        .container {
+            /* background: #e0e0e0;height: 1rem;*/
+             margin: 0 0 1rem;
+             
+             display: flex;
+             /* align-items por defecto tiene el valor `stretch` */
+             align-items: center;  
+            }  
+           .center-h {
+             justify-content: center;
+           }
+           .center-v {
+             align-items: center;
+           }
+        </style>
+        <!--  <div class="child">
+            <code>texto<br>centrado</code>
+          </div>
+        </div>-->
+
+    <!-- <div class="container-fluid cew-9">-->
+<div class="container">
+    <div class="row">
+    <div class="col">
+        <div class="container center-h center-v">
+            <style>
+                .container {
+                    /* background: #e0e0e0;height: 1rem;*/
+                     margin: 0 0 1rem;
+                     
+                     display: flex;
+                     /* align-items por defecto tiene el valor `stretch` */
+                     align-items: start;  
+                    }  
+                   .center-h {
+                     justify-content: center;
+                   }
+                   .center-v {
+                     align-items: center;
+                   }
+                </style>
+
+    <div class="column is-9">
+        <div class="row justify-content-center align-self-center welcome">
+            <article class="post">
+                <div class="col-2">
+            <h1 style="text-align:center"><strong>BIENVENIDAS</strong></h1>
+            <div style="width:150%">
+            <form action="/persona/buscar" method="GET">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Buscar clientes: </label>
+                <input type="buscar" autocomplete="false" name="keyword" autofocus class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=" por DNI...">
+                <button type="submit" class="btn btn-primary" onclick="searchByDNI()">Buscar</button>
+                <!--<p class="control">
+                    <button class="button is-small is-info is-outlined" onclick="searchByDNI()">
+                        <span class="icon"><i class="fa fa-user"></i></span>
+                        <span>Buscar</span>
+                    </button>
+                </p>-->
+                <br><br>
+                
+                <p><small id="emailHelp" class="form-text text-muted">Solo se muestran datos generales.</small></p>
+            </div>
+            </form>
+            </div>
+            </article>
+        </div>
+    </div>
+    </div></div>
+</div> </div>
+</div><!--Cierra contenedor-->
+
+<!--Contenedor vacio-->
+<div class="columns">
+    <div class="White">
+        <div id="vacio" class="contentpane"><!-- Start_Module_765 --><div id="dnn_ctr765_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+        <div id="vacio" class="Normal">
+           </article>
+            <div class="columns">
+               <div class="column is-11">
+               <div class="box content">
+                <!--Sin contenido-->
+                <div class="navbar-item">
+                    <article class="post">
+                        <a class="navbar-brand" href="#">Version</a>                
+                    </article>
+                    </div>
+          <!--  <article class="post">
+                </div>
+                </div>
+            </div> 
+            <div class="navbar-start">
+                <article class="post">            
+                <li></li> <Sin contenido-->
+                   
+        <!--</article> -->
+        </div>
+
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-menu">
+             <div class="navbar-start">
+                <div class="box content"></div>
+                <!--Consulta-->
    
+<div class="Theme_01_Default form-align-left   dg-form-content-box form-line-load" id="form_div_763" style="width:50%;"> 
+    <div class="col-6">
+    <ul class="form_list dg-form-content form-line size-default light   "> 
+            <li style="width:70%">
+                <div class="form-control-wrap  row1">
+                <div  name="Ctl$EnvianosunaConsulta$763" id="Ctl_EnvianosunaConsulta_763">
+                    <h3 class="color-white">Envianos una Consulta</h3></div>
+                </div>
+            </li>
+            <li style="width:70%">
+                <div class="form-control-wrap  row2">
+                    <label for="Ctl_Name_763">Nombre<span class='form_required'> *</span></label>  
+                    <div class="form_input">
+                        <input type="text" name="Ctl$Name$763" id="Ctl_Name_763" placeholder="Nombre" title="Nombre" class="validate[required,maxSize[2000]] required" maxlength="2000" style="width:100%;" />
+                     </div>
+                </div>
+            </li>
+            <li style="width:70%">
+                <div class="form-control-wrap  row3">
+                    <label for="Ctl_CUILCUIT_763">CUIL/CUIT<span class='form_required'> *</span></label>  
+                    <div class="form_input">
+                        <input type="text" name="Ctl$CUILCUIT$763" id="Ctl_CUILCUIT_763" class="validate[required,maxSize[2000]] required" maxlength="2000" style="width:100%;" />
+                    </div>
+                </div>
+            </li>
+            <li style="width:70%">
+                <div class="form-control-wrap  row4">
+                    <label for="Ctl_Telefono_763">Teléfono</label>  
+                    <div class="form_input">
+                        <input type="text" name="Ctl$Telefono$763" id="Ctl_Telefono_763" placeholder="Teléfono" title="Teléfono" class="validate[maxSize[2000]] " maxlength="2000" style="width:100%;" />
+                    </div>
+                </div>
+            </li>
+            <li style="width:70%">
+                <div class="form-control-wrap  row5">
+                    <label for="Ctl_Email_763">Email<span class='form_required'> *</span></label>  
+                    <div class="form_input">
+                        <input type="email" name="Ctl$Email$763" id="Ctl_Email_763" placeholder="Email" title="Email" class="validate[required,custom[email],maxSize[2000]] required" maxlength="2000" style="width:100%;" />
+                     </div>
+                </div>
+            </li>
+                        <li style="width:70%">
+                <div class="form-control-wrap  row6">
+                    <label for="Ctl_Messages_763">Mensaje<span class='form_required'> *</span></label>  
+                        <div class="form_input">
+                        <textarea  name="Ctl$Messages$763" id="Ctl_Messages_763" placeholder="Mensaje" title="Mensaje" class="validate[required,maxSize[2000]] required " style="width:100%;height:160px;" rows="4" maxlength="2000" ></textarea>
+                        </div>
+                </div>
+            </li>
+                        <li style="width:70%">
+                <div class="form-control-wrap  row7">
+                                       <div  name="Ctl$IMPORTANTE$763" id="Ctl_IMPORTANTE_763"><div style="align-items: center;">
+<div id="card-confirmacion" class="card card-message">
+<div class="card-body">
+<h5 class="card-title" style="color: #666666; font-size: 20px;"><strong>Importante</strong></h5>
+<p class="card-text">Le recordamos que en <a href="https://www.bancodecorrientes.com.ar/personas/tutoriales-audiovisuales" target="_blank">Tutoriales Audiovisuales </a> y en <a href="https://www.bancodecorrientes.com.ar/nosotros/atencion-al-cliente/consultas-frecuentes" target="_blank" rel="noopener noreferrer"> Consultas Frecuentes</a> va a encontrar información relevante que podría ayudarlo. O comunicándose con <a href="https://wa.me/5493794948684"> Dora</a>, nuestra asistente virtual.</p>
+</div>
+</div>
+</div>
+<div class="form-group form-check mt-4"><!--
+    <input type="checkbox" class="form-check-input" id="confirmacion" style="display: inline-block;">
+     --> <!-- estilo iphone --> <input id="confirmacion02" class="form-check-input ios8-switch" style="display: none;" type="checkbox" /> 
+     <label for="confirmacion02"> He visitado ambas secciones y no encontré la solución.
+     </label> <!-- fin estilo iphone --> <!-- <label class="form-check-label" for="exampleCheck1" id="checkbox1" >He visitado ambas secciones y no encontre la solución.</label> -->
+    </div>
+
+     </div>
+    </li>
+    <li class="from-footer">
+        <div class="form_submit text-center">   
+            <input type="submit" name="dnn$ctr763$View_Index$ctl00$SubmitButton" id="dnn_ctr763_View_Index_ctl00_SubmitButton" data-verify="Submit"  onclick="" title="Enviar"  value="Enviar"  class="SubmitButton763 btn botonenviar-white-disable" />
+        </div>                              
+    </li>
+    </ul>	
+</div>	
+              </li> 
+            </div> <!--Cierra fila consulta-->
+        </div></div> 
+             </div>
+        <div class="navbar-end">
+            <article class="post">
+                <h2>Bienvenidaxx></h2>
+                 <!--Mapa de sucursales-->
+    <div class="White">
+        <div id="dnn_ctr765_ContentPane" class="contentpane"><!-- Start_Module_765 -->
+            <div id="dnn_ctr765_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+            <div id="dnn_ctr765_HtmlModule_lblContent" class="Normal">
+                <div class="google-maps" style="position:inherit !important;">
+                    <iframe title="Mapa de Cajeros " allowfullscreen="" frameborder="100" height="300" src="https://www.google.com/maps/d/embed?mid=1Yl6neRD9CZXTALAPnh_d7_h9jAT1G3s&amp;ehbc=2E312F" style="border:0;" tabindex="-2" width="400"></iframe>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+            </article>
+              
+        </div> <!--Cierra encabezado final-->
+        </div><!--Cierra menu-->
+    </div><!--Cierra contenedor-->
+</nav>           
+        
+<!--<nav class="navbar navbar-default">
+    <div class="container">
+    <div class="row">
+        <div class="col">
+        <div class="navbar-header">
+            <div class="navbar-item">
+            <article class="post">
+                <a class="navbar-brand" href="#">Version</a>                
+            </article> 
+            </div>
+        </div>
+        <div>
+        <ul class="nav navbar-nav">
+        <li class="active"></li>
+        <li></li>
+        <li>
+            <div class="navbar-end">
+                <article class="post">
+
+                </article>
+            </div> 
+      
+                </li> 
+                <li><a href="#">Opción 5</a></li> 
+                </ul>
+              </div>
+            </div>
+        </div>
+          </nav> -->
+
+        
+<!--Clima grande 
+</div></div></div></div>
+<div class="dng-column col-sm-12 order-lg-3 order-2 footer-infogeneral-contact">
+    <div class="dng-column-inner " id="column-548820" > 
+    <div id="dnn_BoxInfoGeneral1" class="panebox BoxInfoGeneral1">
+        <div class="DnnModule DnnModule-DNN_HTML DnnModule-755"><a name="755"></a>  -->
+
+	
+    
+    
+     <!--Informacion-->
+        <div class="column is-7">
+            <div class="navbar-end">
+            <div class="box content">
+                <div class="White">
+                <div id="dnn_ctr755_ContentPane" class="contentpane"><!-- Start_Module_755 -->
+                    <div id="dnn_ctr755_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                    <div id="dnn_ctr755_HtmlModule_lblContent" class="Normal">
+                        <div class="col-6">
+                            <h6 class="title text-center" style="color:#424242 !important; font-size: 18px !important; font-weight: 600 !important; " tabindex="0">Información General</h6>
+                            <p alt="Llamanos al  " class="info text-center"><a href="tel:0800 444 0160">0800 444 0160</a></p>
+                            <p class="info text-center" title="Escribinos al "><a href="mailto:atencioncliente@bcoctes.com.ar">atencioncliente@bcoctes.com.ar</a></p>
+                            <p class="info text-center" tabindex="0">Domicilio Legal: Lavalle 415</p>
+                            <p class="info text-center">CP: W3400AYS &ndash; Corrientes</p>
+                         </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -93,16 +93,16 @@
 			<div class="container">
 				<div class="navbar-menu">
 					<div class="navbar-start">
-						<a class="navbar-item is-active" href="/">Inicio</a>
+						<a class="navbar-item" href="/">Inicio</a>
             <a class="navbar-item" href="cuentas">Movimientos</a>
            	<a class="navbar-item" href="proceso">Proceso de Archivos</a>
-            <a class="navbar-item" href="nuevo">Nuevo cliente</a>
+            <a class="navbar-item is-active" href="nuevo">Nuevo cliente</a>
 					</div>
           <div class="navbar-end">
 						<article class="post">
-              <h2>
-                {{saludo}}
-              </h2>
+              <h3>
+                Hora:
+              </h3>
             </article>
 					</div>
 				</div>
@@ -118,12 +118,59 @@
         <div class="columns">
           <div class="column is-9">
             <div class="box content">
-              <article class="post">
-                <form action="http://localhost:5000/procesar_depositos" method="POST" enctype="multipart/form-data">
-                  <input type="file" name="text" />
-                  <input type="submit" value="Guardar"/>
-                </form>
-              </article>
-   
+                             
+                      <!--<input class="input" type="search" placeholder="Buscar por DNI...">-->
+                      <div class="form-group">
+                        <label for="example">Ingrese su n&uacute;mero de DNI: </label>
+                        <input type="input" autocomplete="false" name="keyword" autofocus class="form-control"  placeholder=" sin puntos...">
+                        <br><br>
+                        <p><small id="emailHelp" class="form-text text-muted">Verifique su DNI, antes de guardar. <button type="submit" class="btn btn-primary">Guardar</button></p></small>
+                    
+                  </div>
+                  <article class="post">
+                              
+                  </article>
+                  <div class="navbar">
+                    <div class="navbar-item">
+                <article>
+                 <label for="start">Ingrese su nombre:</label>
+                  <input class="input" name="text">
+
+                  <!--<input type="date" id="start" name="trip-start"
+                         value="2018-07-22"
+                         min="2018-01-01" max="2005-12-31">-->
+                  
+                        </article>
+                  <div class="navbar-item">
+                    <article>
+                      <label for="start">Ingrese su apellido:</label>
+                      <input class="input" name="text">
+                    </article>
+                  </div>
+                </div>
+                  </div>
+                <article>
+                  <form action="http://localhost:5000/nuevo">
+                    <label>
+                      Ingrese su fecha de nacimiento:
+                      <input type="date" name="nuevo" />
+                      <button>Crear usuario</button>
+                    </label>
+                  
+                    <p></p>
+                  </form>
+                </article>
+              </div>
+            </div>
+          </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 color10 text-center">
+              <h1 style="text-align:center"><strong>Janina S&aacute;nchez | Todos los derechos reservados </strong></h1>
+            <label> <br> </label>
+            <br>
+            </div>
+          </div>
+        </div>
     </body>
     </html>

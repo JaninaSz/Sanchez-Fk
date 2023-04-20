@@ -1,5 +1,5 @@
 import datetime
-
+import csv
 
 class Cuenta(object):
 
@@ -18,6 +18,23 @@ class Cuenta(object):
         # TODO: Completar para que quede mejor con nro de cuenta
         print(f"CUENTA comun {self.cantidad}")
 
+    def movimiento_Cuenta(self,dni,numero_de_cuenta,monto,descripcion,fecha_y_hora):
+        cuentas = {}
+        archivo = open("cuenta.csv", "r")
+        archivo_csv = csv.reader(archivo)
+        next(archivo_csv)
+        for dni, numero_de_cuenta,monto in archivo_csv:
+            cuenta = Cuenta(dni, numero_de_cuenta,monto,descripcion,fecha_y_hora)
+            cuenta.crear_cuenta()
+            # La parte mas importante donde agrego al diccionario
+            # con clave = dni el objecto cuenta
+            cuentas['dni'] = cuenta
+            cuenta.crear_movimiento()
+        
+        archivo.close()
+        print(f' {cuentas}')
+        return cuentas
+    
 class MovimientoCuenta(object):
 
     def __init__(self, descripcion, monto_del_movimiento):

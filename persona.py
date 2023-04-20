@@ -12,6 +12,7 @@ def convertir_fecha(string_fecha):
 class Persona(object):
     def __init__(self, dni, nombre, str_fecha_nacimiento):
         self.nombre = nombre
+        self.fecha_y_hora = datetime.datetime.now()
         self.fecha_nacimiento = convertir_fecha(str_fecha_nacimiento)
         self.dni = dni
         self.cuentas = []
@@ -34,5 +35,7 @@ class Persona(object):
     def saludo(self):
         #  Saludo que indique hora fecha y clima
         return f"Bienvenida {self.nombre}"
+        print("")
+        return " Fecha: {self.fecha_y_hora}"
         print(datetime.date())
         time.strftime("%H:%M:%S")

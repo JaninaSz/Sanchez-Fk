@@ -1,6 +1,6 @@
 import csv
 from persona import Persona
-
+#from cuenta import Cuenta
 
 def crear_cuentas():
     personas = {}
@@ -13,6 +13,7 @@ def crear_cuentas():
         # La parte mas importante donde agrego al diccionario
         # con clave = dni el objecto persona
         personas['dni'] = persona
+        #persona.crear_movimiento()
         
     archivo.close()
     print(f' {personas}')

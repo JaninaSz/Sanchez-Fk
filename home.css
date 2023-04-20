@@ -1,7 +1,16 @@
-.bienvenida {
+.welcome {
     margin: 0 auto;
 }
 
-.bienvenida h1 {
+.welcome h1 {
 font-size: 3.5em;
+}
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    margin: 0.4rem 0;
 }

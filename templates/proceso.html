@@ -114,20 +114,68 @@
 			<div class="container">
 				<div class="navbar-menu">
 					<div class="navbar-start">
-						<a class="navbar-item is-active" href="#">Inicio</a>
+						<a class="navbar-item" href="/">Inicio</a>
 						<a class="navbar-item" href="cuentas">Movimientos</a>
 						<a class="navbar-item is-active" href="proceso">Proceso de Archivos</a>
 						<a class="navbar-item" href="nuevo">Nuevo cliente</a>
 					</div>
 							
 					<div class="navbar-end">
-						<div class="navbar-item">
+						<article class="post">
+							<h2>
+							  {{saludo}}
+							</h2>
+						  </article>
+						<!--<div class="navbar-item">
 							<input class="input" type="search" placeholder="Buscar por DNI...">
-						</div>
+						</div>-->
 					</div>
 				</div>
 			</div>
 		</nav>
+		<section class="container">
+			<article class="post">
+			  <h4>
+				Operaciones de cuenta
+			  </h4>
+			</article>
+			  <div class="columns">
+				<div class="column is-11">
+				  <div class="box content">
+								   
+							<!--<input class="input" type="search" placeholder="Buscar por DNI...">-->
+						<div class="form-group">
+							  <label for="example">Ingrese su n&uacute;mero de cuenta: </label>
+							  <input type="input" autocomplete="false" name="keyword" autofocus class="form-control"  placeholder=" sin puntos...">
+							  <br><br>
+							  <p><small id="emailHelp" class="form-text text-muted">No comparta con nadie estos datos. </p></small>
+						</div>
+						<article class="post">
+									
+						</article>
+						<div class="navbar">
+						  <div class="navbar-item">
+					  <article>
+					   <label for="start">Indique monto a ingresar:</label>
+					   <input type="text"/>
+	  					</article>
+					
+					  </div>
+						</div>
+					  <article>
+						<form action="http://localhost:5000/crear_movimiento">
+						  <label>
+							Indique una descripci&oacute;n de la operaci&oacute;n:
+							<input class="input" name="text"><button>Guardar</button>
+						  </label>
+						
+						  <p></p>
+						</form>
+					  </article>
+					</div>
+				  </div>
+				</div>
+
 		<section class="container">
 		<article class="post">
 			<h4>
@@ -135,7 +183,7 @@
 			</h4>
 		</article>
 			<div class="columns">
-				<div class="column is-9">
+				<div class="column is-6">
 					<div class="box content">
 						<article class="post">
 							<form action="http://localhost:5000/procesar_depositos" method="POST" enctype="multipart/form-data">

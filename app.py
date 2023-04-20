@@ -14,13 +14,15 @@ def cuentas():
                            movements=persona_titular.obtener_todos_los_movimientos())
 @app.route('/proceso')
 def proceso():
-    return render_template('proceso.html')
+    persona_titular = lista_de_datos['dni']
+    return render_template('proceso.html',saludo=persona_titular.saludo())
 
 @app.route('/nuevo')
 def nuevo():
-    return render_template('nuevo.html')
+    nuevo_cliente=lista_de_datos['dni']
+    return render_template('nuevo.html',crear_cuenta=nuevo_cliente.crear_cuenta())
 
 if __name__ == '__main__':
-    import proceso_cuentas
-    lista_de_datos = proceso_cuentas.crear_cuentas()
-    app.run(debug=True)
+   import proceso_cuentas
+   lista_de_datos = proceso_cuentas.crear_cuentas()
+   app.run(debug=True)
