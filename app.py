@@ -22,6 +22,10 @@ def nuevo():
     nuevo_cliente=lista_de_datos['dni']
     return render_template('nuevo.html',crear_cuenta=nuevo_cliente.crear_cuenta())
 
+@app.route('/inicial')
+def inicial():
+    return render_template('inicial.html')
+
 if __name__ == '__main__':
    import proceso_cuentas
    lista_de_datos = proceso_cuentas.crear_cuentas()

@@ -18,7 +18,7 @@
         }
         footer {
           background-color: #F2F6FA !important;
-        } 
+        } */
         .topNav {
           border-top: 2px solid #3498DB;
         }
@@ -64,7 +64,7 @@
           padding-bottom: 1rem;
           padding-right: 1rem;
           border-bottom: 1px solid #E6EAEE;
-        } 
+        }
         article.post:last-child {
           padding-bottom: 0;
           border-bottom: none;
@@ -74,7 +74,8 @@
         }
     </style>
     </head>
-	<body>
+
+    <body>
 		<nav class="navbar topNav">
 			<div class="container">
 
@@ -83,49 +84,25 @@
 						<img src="https://1ra-intro-python.adaitw.org/img/iso_blanco.svg" width="112" height="328">
             
 					</a>
-				 <div class="navbar-burger burger" data-target="topNav">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div> 
-				</div>
-
-				<div id="topNav" class="navbar-menu">
-					<div class="navbar-item">
-						<div class="navbar-item">
-							<div class="field is-grouped">
-								<div class="navbar-item">
-                                    <div class="navbar-item">
-                                        <input class="input is-small" color= #5da6f0 type="text" id="dni" placeholder="Nro de DNI...">
-                                    </div>
-                                </div>
-                                <p class="control">
-                                    <button class="button is-small is-info is-outlined" onclick="searchByDNI()">
-                                        <span class="icon"><i class="fa fa-user"></i></span>
-                                        <span>Buscar</span>
-                                    </button>
-                                </p>
-                            </div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</nav>
+                </div>
+            </div>
+        </nav>
+  
 
 		<nav class="navbar">
 			<div class="container">
 				<div class="navbar-menu">
 					<div class="navbar-start">
-            <a class="navbar-item" href="/">Inicio</a>
-						<a class="navbar-item is-active" href="cuentas">Movimientos</a>
+						<a class="navbar-item" href="/">Inicio</a>
+            <a class="navbar-item" href="cuentas">Movimientos</a>
            	<a class="navbar-item" href="proceso">Proceso de Archivos</a>
-            <a class="navbar-item" href="nuevo">Nuevo cliente</a>
+            <a class="navbar-item is-active" href="nuevo">Nuevo cliente</a>
 					</div>
           <div class="navbar-end">
 						<article class="post">
-              <h2>
-                {{saludo}}
-              </h2>
+              <h3>
+                Hora:
+              </h3>
             </article>
 					</div>
 				</div>
@@ -135,54 +112,43 @@
     <section class="container">
       <article class="post">
         <h4>
-          Movimientos de cuenta
+          
         </h4>
       </article>
-			<div class="columns">
-				<div class="column is-9">
-					<div class="box content">
-						{% for movement in movements %}
-						<article class="post">
-							{{movement}}
-          	</article>
-						{% endfor %}
-					</div>
-				</div>
-			</div>
-		</section>
-    <section class="container">
-      <article class="post">
-        <h4>
-          Año anterior
-        </h4>
-      </article>
-			<div class="columns">
-				<div class="column is-12">
-					<div class="box content">
-						{% for movement in movements %}
-						<article class="post">
-							{{movement}}
-              {{obtener_todos_los_movimientos}}
-						</article>
-						{% endfor %}
-					</div>
-				</div>
-			</div>
-		</section>
-        <script>
-            function searchByDNI() {
-                const dni = document.getElementById('dni').value.trim();
-                if (dni === null || dni === undefined || dni === '') {
-                  window.location.href='/';
-                } else if (isNaN(dni)){
-                  alert('El valor ingresado no es un número');
-                } else {
-                  window.location.href=`/${dni}`;
-                }
-                if (dni==30111222){
-                   alert('Funcionando');
-                }
-            }
-        </script>
-	</body>
-</html>
+        <div class="columns">
+          <div class="column is-13">
+            <div class="box content">
+                             
+                      <!--<input class="input" type="search" placeholder="Buscar por DNI...">-->
+                <div class="form-group"><!--Inicio del formulario-->
+                    <h1 style="text-align:center"><strong>BIENVENIDAS</strong></h1>
+                    
+                </div>
+                <article class="post"></article>
+                <p></p>
+                
+                </form>
+                  <div class="form-group">
+                    <label>Buscar clientes: </label>
+                    <input type="buscar" autocomplete="false" autofocus class="form-control" placeholder=" por DNI...">
+                    <button type="submit" class="btn btn-primary" onclick="searchByDNI()">Buscar</button>
+                </div>   
+
+                </article>
+                <label>Etiquetas centradas??</label>
+                <article class="post"></article>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 color10 text-center">
+              <h1 style="text-align:center"><strong>Janina S&aacute;nchez | Todos los derechos reservados </strong></h1>
+            <label> <br> </label>
+            <br>
+            </div>
+          </div>
+        </div>
+    </body>
+    </html>
